@@ -1,0 +1,59 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --c-white: #ffffff;
+  --c-white-soft: #f8f8f8;
+  --c-white-mote: #f2f2f2;
+
+  --c-black: #181818;
+  --c-black-soft: #222222;
+  --c--black-mute: #282828;
+
+  --c-indigo: #2c3e50;
+  --c-vue-light: #41b883;
+  --c-vue-dark: #34495e;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--c-white);
+  --color-background-soft: var(--c-white-soft);
+  --color-background-mute: var(--c-white-mute);
+
+  --color-heading: var(--c-indigo);
+  --color-text: var(--c-indigo);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--c-black);
+    --color-background-soft: var(--c-black-soft);
+    --color-background-mute: var(--c-black-mute);
+
+    --color-heading: var(--c-white);
+    --color-text: rgba(235, 235, 235, 0.64);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.3s, background-color 0.3s;
+  line-height: 1.4;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -13,6 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <a class="c-link">Test link</a>
       </nav>
     </div>
   </header>
@@ -20,7 +21,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
+<style lang='scss' scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -81,5 +82,9 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.c-link {
+  color: $color-text;
 }
 </style>
